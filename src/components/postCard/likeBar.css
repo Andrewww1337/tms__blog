@@ -1,0 +1,26 @@
+.likeBar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.gradeBar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.gradeButton{
+    cursor: pointer;
+    background-color: #E5E5E5;
+    border: none;
+}
+.grade{
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 24px;
+    color: #313037;
+    margin: 0 25px 0 8px;
+}
+
+
