@@ -25,42 +25,55 @@ export const Login = () => {
   function ttt() {
     console.log("ttt");
   }
-  const inputRef = useRef<HTMLInputElement | null>(null);
-  useEffect(() => {
-    inputRef.current?.focus();
-    inputRef.current?.addEventListener("click", ttt);
-  });
+  const passwordRef = useRef<HTMLInputElement | null>(null);
+  const emailRef = useRef<HTMLInputElement | null>(null);
+  let emailInfo: string | undefined = emailRef.current?.value;
+  let passwordInfo = passwordRef.current?.value;
+  let signInInfo: string[] = [];
+  function signInDate(a: string, b: string) {
+    signInInfo.push(a + b);
+    return console.log(`${signInInfo}+2`);
+  }
 
   return (
     <div className={`login login--${theme}`}>
       <NavBar />
-      <div className="postListPage">
+      <div className="signPage">
         <p>Back to home</p>
-        <h1>Login</h1>
-        <div>
-          <NameForm
-            inputType="email"
-            placeholder="Your Email"
-            label="Email"
-            disabled={false}
-          />
-          <NameForm
-            inputType="password"
-            placeholder="Your Password"
-            label="Password"
-            disabled={false}
-            inputRef={inputRef}
-          />
+        <h1>Sign In</h1>
+        <div className="signIn">
+          <div className="form">
+            <NameForm
+              inputType="email"
+              placeholder="Your Email"
+              label="Email"
+              disabled={false}
+              inputRef={emailRef}
+            />
+          </div>
+          <div className="form">
+            <NameForm
+              inputType="password"
+              placeholder="Your Password"
+              label="Password"
+              disabled={false}
+              inputRef={passwordRef}
+            />
+          </div>
           <p>Forgot Password</p>
           <Button
-            text="My favorites"
-            onClick={() => console.log(inputRef.current?.value)}
-            className="secondary2"
+            text="Sign in"
+            onClick={() =>
+              console.log(`Email:${emailInfo}, Passpord:${passwordInfo}`)
+            }
+            className="primary"
             disabled={false}
             image=""
           />
-          <input type="submit" value="Отправить" />
+          <p className="signInP">Don’t have an account? Sign Up</p>
         </div>
+        <div className="horizondalLine"></div>
+        <p>dmvodv</p>
       </div>
     </div>
   );

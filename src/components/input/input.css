@@ -1,55 +1,55 @@
-.password,.email,.text{
-    margin-top: 8px;
-    width: 544px;
-    height: 56px;
-    border-radius: 2px;
-    font-size: 16px;
-    border: none;
-    padding: 18px 0 18px 20px;
-   
+.password,
+.email,
+.text {
+  margin-top: 8px;
+  width: 100%;
+
+  border-radius: 2px;
+  font-size: 16px;
+  border: none;
+  padding: 18px 0 18px 20px;
 }
-label{
-    display: flex;
-    flex-direction: column;
-    text-align: left;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #313037;
+label {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #313037;
 }
 
-.text:focus{
-    outline: 2px solid #DADADA;
+.text:focus {
+  outline: 2px solid #dadada;
 }
-.password:focus{
-    outline: 2px solid #DADADA;
+.password:focus {
+  outline: 2px solid #dadada;
 }
 
-.email:focus{
-    outline: 2px solid #DADADA;
+.email:focus {
+  outline: 2px solid #dadada;
 }
-.password:disabled{
-    background-color: #E8E8E8;
-    color: #8D8E97;
+.password:disabled {
+  background-color: #e8e8e8;
+  color: #8d8e97;
 }
-.email:disabled{
-    background-color: #E8E8E8;
-    color: #8D8E97;
+.email:disabled {
+  background-color: #e8e8e8;
+  color: #8d8e97;
 }
-.text:disabled{
-    background-color: #E8E8E8;
-    color: #8D8E97;
+.text:disabled {
+  background-color: #e8e8e8;
+  color: #8d8e97;
 }
-.errorP{
-    color: #FD3419;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    
+.errorP {
+  color: #fd3419;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
 }
-.error{
-    border: 2px solid #FD3419;
+.error {
+  border: 2px solid #fd3419;
 }
