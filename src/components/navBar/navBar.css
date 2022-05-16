@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   background-color: rgba(34, 49, 170, 1);
+  height: 10%;
 }
 .NavMenuLeft {
   display: flex;

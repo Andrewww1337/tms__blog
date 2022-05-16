@@ -10,7 +10,7 @@ import SpaceMedium from "./components/postCard/img/Rectangle 39  med.png";
 import SpaceSmall from "./components/postCard/img/Rectangle 39 small.png";
 import { PostList } from "./components/postList";
 import { Login } from "./components/login";
-
+import Burger from "./components/Button/Burger";
 export const ThemContext = React.createContext("light");
 
 const postsFromSer = [
@@ -165,6 +165,7 @@ function App() {
         <PostList PostsFrom={postsFromSer} />
       </div>
       <Login></Login>
+      <Burger />
     </ThemContext.Provider>
   );
 }

@@ -6,17 +6,12 @@ import iconDisLike from "../Icon/Down.svg";
 import { Button } from "../Button";
 import search from "./icon/search.svg";
 import menu from "./icon/Hamburger_icon.svg";
+import Burger from "../Button/Burger";
 export const NavBar = () => {
   return (
     <div className="NavBarFromComponent">
       <div className="NavMenuLeft">
-        <Button
-          text=""
-          onClick={() => console.log("Text")}
-          className="primary"
-          disabled={false}
-          image={menu}
-        />
+        <Burger></Burger>
         <div className="verticalLine"></div>
       </div>
       <div className="NavMenuRight">
