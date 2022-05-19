@@ -9,6 +9,8 @@ import { Post } from "./routes/Post";
 import { Search } from "./routes/Search";
 import { Posts } from "./routes/Posts";
 import { PostList } from "./components/postList";
+import { store } from "./redux/store";
+import { Provider } from "react-redux";
 
 const postsFromSer = [
   {
@@ -107,13 +109,18 @@ const root = ReactDOM.createRoot(
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
-      <Routes>
-        <Route path="/posts" element={<PostList PostsFrom={postsFromSer} />} />
-        <Route path="/posts/add" element={<AddPost />} />
-        <Route path="/posts/:id" element={<Post />} />
-        <Route path="/search" element={<Search />} />
-      </Routes>
+      <Provider store={store}>
+        <App />
+        <Routes>
+          <Route
+            path="/posts"
+            element={<PostList PostsFrom={postsFromSer} />}
+          />
+          <Route path="/posts/add" element={<AddPost />} />
+          <Route path="/posts/:id" element={<Post />} />
+          <Route path="/search" element={<Search />} />
+        </Routes>
+      </Provider>
     </BrowserRouter>
   </React.StrictMode>
 );

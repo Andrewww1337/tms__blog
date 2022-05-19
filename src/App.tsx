@@ -1,6 +1,15 @@
-import React from "react";
+import React, {
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
 import "./components/input/input.css";
+import { setTheme } from "./redux/reducers/theme";
+import { setBtn } from "./redux/reducers/btn";
 
+import { useAppDispatch, useAppSelector } from "./redux/hooks";
 import "./App.css";
 import { NameForm } from "./components/input";
 import { NameTextarea } from "./components/textarea";
@@ -105,7 +114,39 @@ const postsFromSer = [
   },
 ];
 const colour = "dark";
+
 function App() {
+  let tima: [] = [];
+  const theme = useAppSelector((state) => state.theme.value);
+  const btn = useAppSelector((state) => state.btn.value);
+  const dispatch = useAppDispatch();
+  function yyy() {
+    let tima = JSON.parse(localStorage["reduxx"]).theme.value;
+    console.log(tima);
+    let newTheme = tima;
+    console.log(newTheme);
+    console.log(localStorage);
+    dispatch(setTheme({ newTheme }));
+  }
+  yyy();
+  const toggleTheme = () => {
+    let tima = JSON.parse(localStorage["reduxx"]).theme.value;
+    console.log(tima);
+    let newTheme = tima;
+    console.log(newTheme);
+    console.log(localStorage);
+    dispatch(setTheme({ newTheme }));
+    newTheme = theme === "dark" ? "light" : "dark";
+    console.log(newTheme);
+    console.log(localStorage);
+    dispatch(setTheme({ newTheme })); //!!!
+
+    console.log(localStorage);
+  };
+  const toggleBtn = () => {
+    const newBtn = btn === "dark" ? "light" : "dark";
+    dispatch(setBtn({ newBtn })); //!!!
+  };
   return (
     <ThemContext.Provider value={colour}>
       <div className="App">
@@ -166,6 +207,11 @@ function App() {
       </div>
       <Login></Login>
       <Burger />
+      <div className={`App theme--${theme}`}>
+        <button onClick={toggleTheme}>GGG</button>
+        <button onClick={toggleBtn}>BBB</button>
+        <p>ttt</p>
+      </div>
     </ThemContext.Provider>
   );
 }
