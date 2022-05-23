@@ -1,10 +1,18 @@
 import "./sortingBar.css";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
 import { Button } from "../Button";
+import { useAppDispatch, useAppSelector } from "../../redux/hooks";
+import { setBtn } from "../../redux/reducers/btn";
 
 export const SortingBar = () => {
-  const [pressButton, setPresButton] = useState("All");
-
+  const dispatch = useAppDispatch();
+  const btn = useAppSelector((state) => state.btn.value);
+  console.log(btn);
+  const [pressButton, setPresButton] = useState(btn);
+  const toggleBtn = () => {
+    let newBtn = String(pressButton);
+    dispatch(setBtn({ newBtn }));
+  };
   return (
     <div className="sortingBar">
       <Button
@@ -34,6 +42,7 @@ export const SortingBar = () => {
         disabled={false}
         image=""
       />
+      <button onClick={toggleBtn}>BBB</button>
     </div>
   );
 };

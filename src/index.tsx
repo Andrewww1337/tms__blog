@@ -11,6 +11,7 @@ import { Posts } from "./routes/Posts";
 import { PostList } from "./components/postList";
 import { store } from "./redux/store";
 import { Provider } from "react-redux";
+import { Login } from "./components/login";
 
 const postsFromSer = [
   {
@@ -118,7 +119,7 @@ root.render(
           />
           <Route path="/posts/add" element={<AddPost />} />
           <Route path="/posts/:id" element={<Post />} />
-          <Route path="/search" element={<Search />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </Provider>
     </BrowserRouter>

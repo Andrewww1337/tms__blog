@@ -8,36 +8,26 @@ import React, {
   useRef,
   useState,
 } from "react";
-import { parseIsolatedEntityName } from "typescript";
-import { PostCard } from "../postCard";
 import { NavBar } from "../navBar";
 import "./login.css";
 import { Button } from "../Button";
-import { PageNavigator } from "../pageNavigator";
-import { SortingBar } from "../sortingBar";
 import { ThemContext } from "../../App";
 import { NameForm } from "../input";
 
 export const Login = () => {
-  const [login, setLogin] = useState();
-  const [password, setPassword] = useState();
   const theme = useContext(ThemContext);
-  function ttt() {
-    console.log("ttt");
-  }
+  const [login, setLogin] = useState("");
+  const [password, setPassword] = useState("");
   const passwordRef = useRef<HTMLInputElement | null>(null);
   const emailRef = useRef<HTMLInputElement | null>(null);
-  let emailInfo: string | undefined = emailRef.current?.value;
-  let passwordInfo = passwordRef.current?.value;
-  let signInInfo: string[] = [];
-  function signInDate(a: string, b: string) {
-    signInInfo.push(a + b);
-    return console.log(`${signInInfo}+2`);
+  function setInfoUser() {
+    setLogin(String(emailRef.current?.value));
+    console.log(login);
+    setPassword(String(passwordRef.current?.value));
+    console.log(password);
   }
-
   return (
     <div className={`login login--${theme}`}>
-      <NavBar />
       <div className="signPage">
         <p>Back to home</p>
         <h1>Sign In</h1>
@@ -63,17 +53,15 @@ export const Login = () => {
           <p>Forgot Password</p>
           <Button
             text="Sign in"
-            onClick={() =>
-              console.log(`Email:${emailInfo}, Passpord:${passwordInfo}`)
-            }
+            onClick={() => setInfoUser()}
             className="primary"
             disabled={false}
             image=""
           />
+
           <p className="signInP">Don’t have an account? Sign Up</p>
         </div>
         <div className="horizondalLine"></div>
-        <p>dmvodv</p>
       </div>
     </div>
   );

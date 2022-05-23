@@ -1,11 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import tthemeReducer from "./reducers/theme";
-import ttt from "./reducers/btn";
+import themeReducer from "./reducers/theme";
+import btnReducer from "./reducers/btn";
 
 export const store = configureStore({
   reducer: {
-    theme: tthemeReducer,
-    btn: ttt,
+    theme: themeReducer,
+    btn: btnReducer,
   },
 });
 

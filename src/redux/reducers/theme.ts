@@ -5,13 +5,12 @@ interface ThemeState {
 }
 
 const initialStat1e: ThemeState = {
-  value: "light",
+  value: JSON.parse(localStorage["reduxx"]).theme.value,
 };
 
 export const themeSlice = createSlice({
   name: "theme",
   initialState: initialStat1e,
-
   reducers: {
     setTheme: (state, action: { payload: { newTheme: string } }) => {
       const { newTheme } = action.payload;

@@ -8,7 +8,7 @@ export const Burger = () => {
   const [menuActive, setMenuActive] = useState(false);
   const items = [
     { value: "Home", href: "/posts" },
-    { value: "Add Posts", href: "/search" },
+    { value: "Add Posts", href: "/login" },
   ];
   return (
     <div>

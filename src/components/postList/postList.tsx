@@ -38,7 +38,6 @@ export const PostList = ({ PostsFrom }: PostListProps) => {
 
   return (
     <div className={`postList postlist--${theme}`}>
-      <NavBar />
       <div className="postListPage">
         <h1>Blog</h1>
 

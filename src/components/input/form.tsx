@@ -22,11 +22,6 @@ export const NameForm = ({
   function ttt() {
     console.log("ttt");
   }
-  /*const inputRef = useRef<HTMLInputElement | null>(null);
-  useEffect(() => {
-    inputRef.current?.focus();
-    inputRef.current?.addEventListener("click", ttt);
-  });*/
 
   const [inputValue, setInputValue] = useState("");
   const [error, setError] = useState("");
