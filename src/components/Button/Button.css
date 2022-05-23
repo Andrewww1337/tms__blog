@@ -1,0 +1,101 @@
+.App button{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    gap:10px;
+    height: 56px;
+    padding: 16px 32px;
+    border: none;
+    border-radius: 2px;
+}
+
+.buttonLike{
+    background-color: #E8E8E8;
+    width: 88px;
+    
+}
+.buttonLike:hover{
+    background-color:#5360CD ;
+    
+}
+.buttonLike:hover img{
+    filter: brightness(0) invert(1);
+}
+
+.buttonLike:disabled{
+    background-color: #E8E8E8;
+}
+.buttonLike:disabled img{
+    filter: contrast(0);
+}
+
+
+
+.buttonDisLike{
+    background-color: #E8E8E8;
+    height: 56px;
+}
+.buttonDisLike:hover{
+    background-color: #FD3419;
+}
+.buttonDisLike:hover img{
+    filter: brightness(0) invert(1);
+}
+.buttonDisLike:disabled{
+    background-color: #E8E8E8;
+}
+.buttonDisLike:disabled img{
+    filter: contrast(0);
+}
+.buttonWithIcon{
+    width: 241px;
+    background-color:#E8E8E8 ;
+}
+.buttonWithIcon:hover{
+    background-color:#5360CD ;
+    color: white;
+}
+.buttonWithIcon:hover img{
+    filter: brightness(0) invert(1);
+    
+}
+.buttonWithIcon:disabled img{
+    filter: contrast(0);
+}
+.buttonWithIcon:disabled{
+    color: #8D8E97;
+    background-color: #E8E8E8;
+}
+
+.secondary2{
+    color: #FD3419;
+    background-color: #fff;
+}
+.secondary2:hover{
+    border: 1px solid #DADADA;
+}
+.secondary2:disabled{
+    color: #8D8E97;
+    border: none;
+}
+.secondary{
+    color: #313037;
+    background-color: #E8E8E8;
+}
+.secondary:hover{
+    background-color: #DADADA;
+}
+.secondary:disabled{
+    color: #8D8E97;
+}
+.primary{
+    color: #fff;
+    background-color: #2231AA;
+}
+.primary:hover{
+    background-color: #5360CD
+}
+.primary:disabled{
+    color: #8D8E97;
+    background-color: #E8E8E8;
+}
