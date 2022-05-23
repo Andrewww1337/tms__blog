@@ -1,29 +1,31 @@
-import React from 'react';
+import React from "react";
 
 import "./Button.css";
 
-
 type ButtonProps = {
-  text?: string
-  onClick:()=> any
-  className:string
-  disabled:boolean
-  image?: string
-  
-
+  text?: string;
+  onClick: () => void;
+  className: string;
+  disabled: boolean;
+  image?: string;
 };
 
-export const Button = ({ onClick, text, className, disabled,image}:ButtonProps) => {
-  
+export const Button = ({
+  onClick,
+  text,
+  className,
+  disabled,
+  image,
+}: ButtonProps) => {
   return (
-  <button type="button"  onClick={onClick} className={className} disabled={disabled} >
-     {image && <img className="icon" src={image} alt="no"/>}
+    <button
+      type="button"
+      onClick={onClick}
+      className={className}
+      disabled={disabled}
+    >
+      {image && <img className="icon" src={image} alt="no" />}
       {text}
-      
-      
-      
-     
-  </button>
-  
-  )
+    </button>
+  );
 };
