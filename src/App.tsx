@@ -47,7 +47,6 @@ function App() {
 
         <p>ttt</p>
       </div>
-      <Login></Login>
     </ThemContext.Provider>
   );
 }

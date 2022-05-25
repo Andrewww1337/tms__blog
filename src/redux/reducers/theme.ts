@@ -5,7 +5,7 @@ interface ThemeState {
 }
 
 const initialStat1e: ThemeState = {
-  value: JSON.parse(localStorage["reduxx"]).theme.value,
+  value: "dark", //JSON.parse(localStorage["reduxx"]).theme.value,
 };
 
 export const themeSlice = createSlice({

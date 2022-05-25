@@ -1,6 +1,6 @@
 .login--dark {
-  background-color: inherit;
-  color: inherit;
+  background-color: rgb(47, 46, 58);
+  color: whitesmoke;
 }
 .login {
   display: flex;

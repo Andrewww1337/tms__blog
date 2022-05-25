@@ -120,6 +120,7 @@ root.render(
           <Route path="/posts/add" element={<AddPost />} />
           <Route path="/posts/:id" element={<Post />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/" element={<Login />} />
         </Routes>
       </Provider>
     </BrowserRouter>

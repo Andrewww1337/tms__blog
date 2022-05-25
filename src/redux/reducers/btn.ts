@@ -5,7 +5,7 @@ interface BtnState {
 }
 
 const initialStat2e: BtnState = {
-  value: JSON.parse(localStorage["reduxx"]).btn.value,
+  value: "All", // JSON.parse(localStorage["reduxx"]).btn.value,
 };
 
 export const btnSlice = createSlice({
