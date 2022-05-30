@@ -1,8 +1,8 @@
 import React, { useState, useContext } from "react";
-import Like from "./img/Icon-Thumbs-Up.svg";
-import DisLike from "./img/Icon-Thumbs-Down.svg";
-import Book from "./img/Icon-Bookmark.svg";
-import Dots from "./img/dots.svg";
+import Like from "../../assets/Icon/Up.svg";
+import DisLike from "../../assets/Icon/Down.svg";
+import Book from "../../assets/Icon/Bookmark.svg";
+import Dots from "../../assets/Icon/dots.svg";
 import "./likeBar.css";
 import { ThemContext } from "../../App";
 export const LikeBar = () => {

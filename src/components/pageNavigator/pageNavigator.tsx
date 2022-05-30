@@ -1,7 +1,7 @@
 import React, { useState, useContext } from "react";
 import "./pageNavigator.css";
-import arrowLeft from "../Icon/Icon-Arrow-Down-Left.svg";
-import arrowRight from "../Icon/Icon-Arrow-Down-Right.svg";
+import arrowLeft from "../../assets/Icon/Icon-Arrow-Down-Left.svg";
+import arrowRight from "../../assets/Icon/Icon-Arrow-Down-Right.svg";
 import { Button } from "../Button";
 import { ThemContext } from "../../App";
 

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Menu } from "../Menu";
 import "./Burger.css";
 import { Link } from "react-router-dom";
-import { LikeBar } from "../postCard/likeBar";
+import { LikeBar } from "../likeBar/likeBar";
 
 export const Burger = () => {
   const [menuActive, setMenuActive] = useState(false);

@@ -1,4 +1,4 @@
-import { LikeBar } from "./likeBar";
+import { LikeBar } from "../likeBar/likeBar";
 import "./postCard.css";
 import React, {
   useCallback,
