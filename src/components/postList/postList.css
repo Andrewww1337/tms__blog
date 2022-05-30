@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+.postlist--light {
+  background-color: #e5e5e5;
+}
+.postlist--dark {
+  background-color: rgb(47, 46, 58);
+  color: aliceblue;
+}
+.postListPage {
+  max-width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  text-align: left;
+  margin-top: 72px;
+}
+.postListBlog {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 89px;
+  width: 100%;
+  height: 100%;
+  box-sizing: content-box;
+}
+.postListLeftBlog {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  box-sizing: content-box;
+}
+.postListLeftUp {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  box-sizing: content-box;
+}
+.postListLeftDown {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  justify-content: space-between;
+  box-sizing: content-box;
+}
+.postListRigthBlog {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  justify-content: space-between;
+  box-sizing: content-box;
+}
+
+.internalFirstCard {
+  flex-basis: 100%;
+}
+
+.internalCard {
+  flex-basis: 48%;
+}
+
+.internalSmalCard {
+  width: 100%;
+}
+.forPostList {
+  color: black;
+}
+.forPostList:focus {
+  border-bottom: 2px solid black;
+}
+.sortingBar {
+  display: flex;
+  flex-direction: row;
+  margin-top: 47px;
+}
+.horizondalLine {
+  height: 2px;
+  background-color: rgba(218, 218, 218, 1);
+}

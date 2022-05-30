@@ -1,0 +1,28 @@
+.likeBar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 97%;
+}
+.gradeBar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.gradeButton {
+  cursor: pointer;
+  background-color: inherit;
+  border: none;
+  margin: 33% 33% 33% 0%;
+}
+.gradeButton--dark {
+  filter: brightness(0) invert(1);
+}
+.grade {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 1em;
+  line-height: 1em;
+  color: inherit;
+}
